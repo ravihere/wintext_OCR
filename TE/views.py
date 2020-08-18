@@ -21,7 +21,7 @@ def get_text(request):
             image = request.FILES["image"]
         try:
             img = Image.open(image)
-            pytesseract.pytesseract.tesseract_cmd ='/app/.apt/usr/bin/tesseract'
+            pytesseract.pytesseract.tesseract_cmd ='C:/Program Files/Tesseract-OCR/tesseract.exe'
             result = pytesseract.image_to_string(img, lang=lang)
             result= result.replace('\n\n','\n')
             context={
