@@ -11,7 +11,7 @@ Wintext is an Online Web Application for OCR service i.e.,Extract Text From Imag
 ## Install
 * Download and install required packages
 
-              pip install -r requirements.txt
+		pip install -r requirements.txt
 
 * To start Django server run
 
