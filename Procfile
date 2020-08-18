@@ -1,0 +1,1 @@
+web: gunicorn wintext.wsgi --log-file -

@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}"  />
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1">
+</head>
+<body>
+	<h1>WELCOME' MATE!</h1>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/click.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/nav.css' %}">
+	<h2>Win The Text For Your Image</h2>
+	<pre>Hit  InputImage  WinText!</pre>
+	<div class="imgb">
+		<img src="{% static 'images/logo2.jpg' %}" alt="WinText">
+	</div>
+	<div class="line1">• Wintext Provide Free OCR Service<br>• Recognize Text From Images<br>• Supports Multiple Image Formats & Languages</div>
+	<div class="button_container">
+		<a href="{% url 'wintext' %}" style="text-decoration:none" class="btn"><span>WIN TEXT!</span></a>
+	</div>
+	<div class="container">
+  			<div class="center">
+  				<ul>
+    				<li><a href="{% url 'home' %}" style="color:black;text-decoration:none">HOME</a></li>
+    				<li><a href="{% url 'wintext' %}" style="color:black;text-decoration:none">WinText</a></li>
+    				<li><a href="{% url 'about' %}" style="color:black;text-decoration:none">ABOUT</a></li>
+				</ul>
+			</div>
+	</div>
+<div class="info">
+	©Copyright RAVI KUNTUMALLA 2020 
+</div>
+</body>
+</html>

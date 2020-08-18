@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box; 
+}
+.container ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.cente { 
+  width:200px; 
+  height:200px; 
+  position: absolute;
+  top: 30%; 
+  right: 30%; 
+  margin-top: -100px; 
+  margin-left: -100px; 
+} 
+.imgc {
+  display: block;
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  width: 40%;
+}
+ul li {
+  cursor: pointer;
+  position: relative;
+  margin: 0 1.8em;
+  padding: 0.5em 0.5em;
+  transition: all 0.2s;
+  transition-delay: 0.2s;
+  font-weight: bold;
+  font: 700 25px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  text-decoration:none;
+  font-weight: bold;
+
+
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  font: 700 25px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px; 
+  background-color: white;
+  transition: all  0.2s;
+  font-weight: bold;
+}
+ul li:hover {
+  background-color: rgb(0,136,169);
+} 
+ul li:hover::before {
+  bottom: 56px;
+  left: 0;
+  background-color: rgb(0,136,169);
+}
+h3{
+  font: 700 25px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  color: black;
+  font-weight:400;
+  position: absolute;
+  top: 40%;
+  right: 6%;
+
+}
+h2{
+  font: 700 25px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  color: #999;
+  font-weight:400;
+  position: absolute;
+  top: 24%;
+  left: 23%;
+  }
+pre{
+  position: absolute;
+  top: 55%;
+  right: 17.3%;
+  font-size: 20px;
+}

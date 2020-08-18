@@ -1,0 +1,63 @@
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+/* Main styles */
+body {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGCAMAAABG8BK2AAAAIVBMVEUlJSUoKCgrKysnJycpKSkqKiosLCwmJiYtLS0vLy8uLi6o6UXmAAACy0lEQVR42o1YW3LjMAwTRNBMev8D73Q7NqignCk+Gj0gEaJAO81a2PGAGUl1d6wOUG1indgbAkEI1+7EyvKOQlADJ4LZ5TDOyd5ZeQ8YirHy+9PW2a65sFbGIEbp0DJN50ei6hmwVCgFMM2EmOeAs5CiepxTp3MkMeMWYwCUNCedISJrPPfPlFKrpt8n0fPrJLAP+GUrBZp2yWdCOPsedEvo0gnL6GD1JNYAJC3tU+HFi3hAsvde4S44pQlktaoPPRKKXOPdWCqKXXQXzhqcMvteOq1CXI6byH0f1LCDg+81FhRTIi3mHCKjmzJYelQYgDFE5KGT0E04shSiLMvS+d3UpoaYfV95OBTQpg4Q8xQPdSeTHch3ggPeG42532xYdQAbNQBX9m5enfnp+vnEDEbPYnFNIMb8g4dPMg5nuDlMjnxPdFePwnP2JiCD3w1g0K2CMTHaTJ8up8WK9NkMUTpzOQg13N1qSK8aLqa3fCBDIk6m7wxafm+bVVZl3V3LskJ47upqFbKZuxXPJea50nPHC3OF0H0hEH3PomJY8YQl0fvyfQ2mjPToArrv5wo5l8ap2n0f/L3oxRxsBErW8PgOiqm++78Uq9IZz1Sob4i0CjG9atRY8IT5fq6QdIJ4SokHA7rwDMuviMG5Qg6/fBdMTchdHxfjT6D7b158kJtXqnvBbKI9vS46EfQZP0d5PoEjRIZFdyYw2khvBtftFTKYWiGI0ZTg5EWpl+9LSwT5XoIFLST81ebCddkOuO+l24RLp8v5eDMEa2Ba0mbfsxAjE1iO+MG+ogFXxoS9w7HwH3F9oeNrY8LrBcfje8YffyoQ08GoHL+81mn5nkW3AzD8C2k+Zoxiut+CvaLcqHOIw/2M0apEZ3qIZ2HdpEpnRpYWeIibdHAAZ4aO7WLE6qs9ZrAzPYQ27GdB+mNCp/PzPmBW8ulF/vknsn90xBYctU4L7wAAAABJRU5ErkJggg==') repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse .92s infinite;
+  /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse .92s infinite;
+  /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse .92s infinite;
+  /* Opera 12+ */
+  animation: bg-scrolling-reverse .92s infinite;
+  /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+.logo{
+  position: absolute;
+  top: 9%;
+  left: 9%;
+}

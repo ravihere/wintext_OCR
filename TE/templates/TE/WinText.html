@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WinText</title>
+<style>
+html {
+  overflow-y: scroll;
+}
+</style> 
+<link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}"  />
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1">
+</head>
+<body>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/p_back.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/res_button.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/nav1.css' %}">
+	<div class="logo">
+		<img src="{% static 'images/logo3.JPG' %}" alt="WinText">
+	</div>
+  <div class="x1">▷ Image To Text</div>
+  <div class="x2">● Upload Image And Select The Converting Language' Mate!</div>
+  <div class="y1">▷ Your Text Appear Here' Mate!</div>
+  <!--<div class="y2">● Upload File And Select The Converting Language' Mate!</div>-->
+	<div class="container">
+  			<div class="cente">
+  				<ul>
+    				<li><a href="{% url 'home' %}" style="color:white;text-decoration:none">HOME</a></li>
+    				<li><a href="{% url 'wintext' %}" style="color:white;text-decoration:none">WinText</a></li>
+    				<li><a href="{% url 'about' %}" style="color:white;text-decoration:none">ABOUT</a></li>
+				</ul>
+			</div>
+	</div>
+<div>
+<form action="{% url 'get_text' %}" method="POST" enctype="multipart/form-data">{% csrf_token %}
+<div class='file-input'>
+  <input id="image" name="image" type='file' accept=".jpg,.jpeg,.png,.jfif,.tiff,.bmp" onchange="readURL(this);">
+  <span class='button'>Choose</span>
+  <span class='label' data-js-label>No File Selected</span>
+  <script type="text/javascript" src="{% static 'js/upload.js' %}"></script>
+</div>
+    <input class="buttongt" autocomplete="off" type="submit" value="Get Text" name="submit" onclick="error()">
+    <div class="wrapper">
+  <textarea name="the-textarea" id="values" placeholder="Your Text..."autofocus>{{result}}</textarea>
+  <div id="the-count">
+    <span id="current">CHARACTER COUNT: 0</span>
+  </div>
+</div>
+<script src="http://code.jquery.com/jquery.js"></script>
+
+<script type="text/javascript">
+  $('textarea').keyup(function() {
+    
+  var characterCount = $(this).val().length,
+      current = $('#current'),
+      theCount = $('#the-count');
+    
+  current.text('CHARACTER COUNT: '+characterCount);
+      
+});
+</script>
+<script>  
+        var file = document.getElementById("image");
+        function error() { 
+            if(image.files.length==0){ 
+                alert("Select Both Image and Language' Mate!"); 
+            }
+            else if(!$('#select1').val()){
+              alert("Select Both Image and Language' Mate!");
+            }
+            else{
+              var fileInput = document.getElementById('image');
+    var filePath = fileInput.value;
+    var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.jfif|\.tiff|\.bmp)$/i;
+    if(!allowedExtensions.exec(filePath)){
+        alert("Please upload file having extensions BMP, PNM, PNG, JFIF, JPEG, and TIFF only' Mate!");
+            }
+            }
+          }
+</script>  
+      <div class="save_file">
+  <a id="saveToFile" class="a_link">Save To File</a>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript">
+$(function() {
+  $('#saveToFile').click(function(e) {
+    var data = document.getElementById('values').value;
+    var data = 'data:application/text;charset=utf-8,' + encodeURIComponent(data);
+    var el = e.currentTarget;
+    el.href = data;
+    el.target = '_blank';
+    el.download = 'WinText.txt';
+  });
+});
+</script>
+  </div>
+  <select class="select-css" name="lang" id="select1">
+    <option selected="selected" disabled>Choose Language</option>
+    <option value="eng">English</option>
+    <option value="tel">Telugu</option>
+    <option value="hin">Hindi</option>
+    <option value="tam">Tamil</option>
+    <option value="mar">Marathi</option>
+    <option value="kan">Kannada</option>
+    <option value="pan">Punjabi</option>
+    <option value="ben">Bengali</option>
+    <option value="guj">Gujarathi</option>
+    <option value="mal">Malayalam</option>
+    <option value="nep">Nepali</option>
+    <option value="urd">Urdu</option>
+    <option value="san">Sanskrit</option>
+    <option value="ell">Greek</option>
+    <option value="spa">Spanish</option>
+  </select>
+</form>
+</div>
+</body></html>

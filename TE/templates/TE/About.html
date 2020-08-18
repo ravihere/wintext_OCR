@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ABOUT</title>
+  <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}"  />
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1">
+</head>
+<body>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <h1>ABOUT' MATE!</h1>
+    <h2>Happy To Know About</h2>
+    <h3><p><i> ‣ Wintext is an Free Online OCR Service<br>
+  ‣ Convert Images into Editable Text & Download TextFile<br>‣ Multilingual Conversion<br>‣ Wintext Dont Store Your Data<br>   Including Uploaded Images<br>‣ 100% Free & Privacy Simplified</i></br></p></h3>
+	<div class="imgc">
+    <img src="{% static 'images/logo2.jpg' %}" alt="WinText"> 
+  </div>
+  
+	<div class="container">
+  		<div class="center">
+  			<ul>
+    			<li><a href="{% url 'home' %}" style="color:black;text-decoration:none">HOME</a></li>
+    			<li><a href="{% url 'wintext' %}" style="color:black;text-decoration:none">WinText</a></li>
+    			<li><a href="{% url 'about' %}" style="color:black;text-decoration:none">ABOUT</a></li>
+			</ul>
+		</div>
+	</div>
+<div class="info">
+	©Copyright RAVI KUNTUMALLA 2020 
+</div>
+</body>
+</html>

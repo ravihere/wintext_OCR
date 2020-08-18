@@ -1,2 +1,2 @@
-# wintext_OCR
-Online Web Application For OCR service
+# WINTEXT_SRC
+AN ONLINE OCR WEB APPLICATION
